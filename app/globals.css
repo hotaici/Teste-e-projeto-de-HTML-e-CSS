@@ -1,40 +1,29 @@
+/* app/globals.css
+   Estilos GLOBAIS: valem para o site inteiro.
+   Usamos "variáveis CSS" (--nome) para não repetir cores. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --fundo: #f4f5f7;
+  --cartao: #ffffff;
+  --texto: #1f2937;
+  --texto-suave: #6b7280;
+  --primaria: #2563eb;
+  --verde: #16a34a;
+  --vermelho: #dc2626;
+  --borda: #e5e7eb;
+  --raio: 10px;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
 }
 
 a {
@@ -42,8 +31,102 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* ----- Menu do topo ----- */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: var(--cartao);
+  border-bottom: 1px solid var(--borda);
+}
+
+.logo {
+  font-weight: 700;
+  color: var(--primaria);
+}
+
+.menu nav {
+  display: flex;
+  gap: 16px;
+}
+
+.menu nav a:hover {
+  color: var(--primaria);
+}
+
+/* ----- Área central ----- */
+.container {
+  max-width: 720px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+/* ----- Componentes reaproveitados (cartões, campos, botões) ----- */
+.cartao {
+  background: var(--cartao);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  background: white;
+  padding: 10px 12px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--primaria);
+  border-color: transparent;
+}
+
+button {
+  background: var(--primaria);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.botao-perigo {
+  background: transparent;
+  color: var(--vermelho);
+  padding: 6px 10px;
+}
+
+.erro {
+  color: var(--vermelho);
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.vazio {
+  color: var(--texto-suave);
+  text-align: center;
+  padding: 24px 0;
+.menu nav a.link-ativo {
+  color: #2563eb;
+  font-weight: 700;
+}
 }

@@ -1,0 +1,274 @@
+.pagina {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cabecalho {
+  margin-bottom: 1.5rem;
+}
+.cabecalho h1 {
+  margin: 0;
+  font-size: 1.9rem;
+}
+.cabecalho p {
+  margin: 0.25rem 0 0;
+  color: #64748b;
+}
+
+/* ----- Resumo ----- */
+.resumo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 0.9rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+.statIcone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  font-size: 1.4rem;
+  background: #eff6ff;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+.statNumero {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.statRotulo {
+  display: block;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* ----- Formulário ----- */
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.campo {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+  width: auto;
+}
+.campoTitulo {
+  flex: 1 1 200px;
+}
+.botaoPrincipal {
+  width: auto;
+  padding: 0.65rem 1.1rem;
+  background: #2563eb;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.botaoPrincipal:hover {
+  background: #1d4ed8;
+}
+.erro {
+  color: #dc2626;
+  margin: 0 0 0.5rem;
+}
+
+/* ----- Filtros ----- */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.pill {
+  width: auto;
+  padding: 0.45rem 1rem;
+  background: #fff;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.pill:hover {
+  border-color: #94a3b8;
+}
+.pillAtiva {
+  background: #0f172a;
+  color: #fff;
+  border-color: #0f172a;
+}
+
+/* ----- Grade de filmes (celular: 1 coluna) ----- */
+.grade {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.filme {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-top: 5px solid var(--cor);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.filme:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+.genero {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cor);
+  background: color-mix(in srgb, var(--cor) 12%, white);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+.badgeOk,
+.badgeEspera {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+.badgeOk {
+  color: #15803d;
+  background: #dcfce7;
+}
+.badgeEspera {
+  color: #a16207;
+  background: #fef9c3;
+}
+.titulo {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.acoes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+.botaoAssistir {
+  width: 100%;
+  padding: 0.6rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.botaoAssistir:hover {
+  background: #dbeafe;
+}
+.apagar {
+  width: auto;
+  align-self: flex-start;
+  padding: 0.25rem 0;
+  background: none;
+  color: #dc2626;
+  border: 0;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.apagar:hover {
+  text-decoration: underline;
+}
+
+/* ----- Estrelas ----- */
+.nota {
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  color: #f59e0b;
+}
+.apagada {
+  color: #e2e8f0;
+}
+.pergunta {
+  margin: 0 0 0.25rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+.estrelas {
+  display: flex;
+  gap: 0.15rem;
+}
+.estrela,
+.estrelaOn {
+  width: auto;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #cbd5e1;
+}
+.estrelaOn {
+  color: #f59e0b;
+}
+.link {
+  width: auto;
+  padding: 0;
+  margin-top: 0.25rem;
+  background: none;
+  border: 0;
+  color: #64748b;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.vazio {
+  text-align: center;
+  color: #64748b;
+  padding: 2rem;
+  background: #fff;
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+}
+
+/* ----- Telas maiores ----- */
+@media (min-width: 640px) {
+  .resumo {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grade {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
